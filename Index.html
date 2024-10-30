@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Форма регистрации</h1>
+            <form class="form-input">
+                <div id = "login-input-container" class="form-input-div">
+                    <label for="login-input">Логин</label>
+                    <input id="login-input" name="login" class="form-input-text" type="text" placeholder="Логин"/>
+                </div>
+                <div id = "pass-input-container" class="form-input-div">
+                    <label for="password-input">Пароль</label>
+                    <input id="password-input" name="password" class="form-input-text" type="password" placeholder="Пароль"/>
+                </div>
+                <div class="form-input-div">
+                    <label for="user-type-input">Тип пользователя</label>
+                    <select id="user-type-input" class="form-input-select">
+                        <option value="Administrator">Адмиинистратор</option>
+                        <option value="Modarator">Модератор</option>
+                        <option value="User">Пользователь</option>
+                    </select>
+                </div>
+                <input id="button-input" type="submit" value="Отправить"/>
+            </form>
+        </div>
+    </body>
+</html>

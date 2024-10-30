@@ -1,0 +1,63 @@
+/*Class*/
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.form-input{
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    padding: 20px;
+    font-size: 20px;
+    zoom: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+.form-input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.form-input-text{
+    border-radius: 50px;
+    padding: 5%;
+}
+.form-input-select{
+    padding: 5%;
+}
+.form-input-text-error{
+    border-radius: 50px;
+    padding: 5%;
+    border-color: red;
+}
+.form-error-message{
+    color: red;
+    font-size: 12px;
+}
+
+
+/*Selector*/
+
+input[type=submit]{
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #43b443;
+}
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #0CFF00;
+}
+input[type=submit]:active{
+    background-color: green;
+    color: rgb(255, 255, 255);
+}
