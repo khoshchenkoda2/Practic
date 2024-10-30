@@ -8,20 +8,21 @@
     <body>
         <div class="container">
             <h1>Форма регистрации</h1>
-            <form class="form-input">
+            <form class="form-input" action="/reg-data" method="post">
                 <div id = "login-input-container" class="form-input-div">
                     <label for="login-input">Логин</label>
-                    <input id="login-input" name="login" class="form-input-text" type="text" placeholder="Логин"/>
+                    <input id="login-input" name="login" class="form-input-text" type="text" placeholder="Логин" required/>
                 </div>
                 <div id = "pass-input-container" class="form-input-div">
                     <label for="password-input">Пароль</label>
-                    <input id="password-input" name="password" class="form-input-text" type="password" placeholder="Пароль"/>
+                    <input id="password-input" name="password" class="form-input-text" type="password" placeholder="Пароль" required/>
                 </div>
                 <div class="form-input-div">
-                    <label for="user-type-input">Тип пользователя</label>
-                    <select id="user-type-input" class="form-input-select">
-                        <option value="Administrator">Адмиинистратор</option>
-                        <option value="Modarator">Модератор</option>
+                    <label for="role-type-input">Тип пользователя</label>
+                    <select id="role-type-input" name="role" class="form-input-select" required>
+                        <option value="" disabled selected>Выберите тип</option>
+                        <option value="Administrator">Администратор</option>
+                        <option value="Moderator">Модератор</option>
                         <option value="User">Пользователь</option>
                     </select>
                 </div>
