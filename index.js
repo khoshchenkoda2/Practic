@@ -6,15 +6,15 @@ const port = 3000
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, './public')));
 
 app.get('*', (req, res) => {
-  res.sendFile("index.html", {root: path.join(__dirname)})
+  res.sendFile("index.html", {root: path.join(__dirname, './public')})
 })
 
 app.post('/reg-data', (req, res) => {
-  console.log(">>>>>>>>>>>", req.body)
-  fs.appendFile("data.txt", JSON.stringify(req.body) + "\n", (err) => {
+  const filePath = path.join(__dirname, 'User-data', 'data.txt');
+  fs.appendFile(filePath, JSON.stringify(req.body) + "\n", (err) => {
     if(err){
       res.status(500).send("User not added")
     }
@@ -24,6 +24,4 @@ app.post('/reg-data', (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(port, () => {})
